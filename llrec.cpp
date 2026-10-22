@@ -24,5 +24,4 @@ void llpivot(Node*& head, Node*& smaller, Node*& larger, int pivot){
     larger = curr;
   }
 
-  head = NULL;
 }
