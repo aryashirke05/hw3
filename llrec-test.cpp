@@ -66,7 +66,11 @@ void dealloc(Node* head)
 //   Add any helper functions or
 //   function object struct declarations
 // -----------------------------------------------
-
+struct oddNum {
+  bool operator()(int value){
+    return value % 2 != 0;
+  }
+};
 
 
 
@@ -86,7 +90,10 @@ int main(int argc, char* argv[])
     print(head);
 
     // Test out your linked list code
-
+    head = llfilter(head, oddNum());
+    cout << "After filtering odd numbers: ";
+    print(head);
+    dealloc(head);
 
 
     
